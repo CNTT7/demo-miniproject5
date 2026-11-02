@@ -1,0 +1,17 @@
+MINISHOP BUỔI 05 - CẤU HÌNH THEO THƯ MỤC D:\xampp\htdocs\minishop\project\
+
+Giống minishop-buoi5.zip, chỉ khác:
+- config/config.php : BASE_URL = '/minishop/project/'
+- config/db.php     : thông số CSDL đặt trong tệp này, DB_HOST = 'localhost:3306'
+- .htaccess (gốc)   : ErrorDocument 404 /minishop/project/404.php
+
+Cài đặt:
+1. Đổi tên thư mục project hiện có (ví dụ project-buoi4) để giữ lại.
+2. Chép thư mục "project" trong gói này vào D:\xampp\htdocs\minishop\
+3. CSDL "minishop" giữ nguyên (cấu trúc bảng không đổi).
+4. Mở http://localhost/minishop/project/ rồi nhấn Ctrl+F5.
+5. Tạo tài khoản quản trị: đăng ký một tài khoản, rồi chạy trong phpMyAdmin (thẻ SQL):
+     UPDATE users SET role = 'admin' WHERE email = 'email-vua-dang-ky';
+   Sau đó đăng xuất và đăng nhập lại để thấy mục "Quản trị".
+
+Lưu ý: thư mục uploads/ phải tồn tại (đã có trong gói) để tải ảnh sản phẩm.
